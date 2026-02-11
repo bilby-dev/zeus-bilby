@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools-scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zeus-bilby"
+authors = [
+    {name = "Colm Talbot", email = "colm.talbot@ligo.org"},
+    {name = "Michael J. Williams", email = "michael.williams@ligo.org"},
+]
+description = "Plugin for using zeus with bilby."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "bilby>=2.3.0",
+    "zeus-mcmc>=2.3.0",
+]
+
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[tool.setuptools_scm]
+
+[project.entry-points."bilby.samplers"]
+zeus = "zeus_bilby.plugin:Zeus"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+docstring-code-format = true
