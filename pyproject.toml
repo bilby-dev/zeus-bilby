@@ -5,6 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "zeus-bilby"
 authors = [
+    {name = "Bilby Developers"},
+]
+maintainers = [
     {name = "Colm Talbot", email = "colm.talbot@ligo.org"},
     {name = "Michael J. Williams", email = "michael.williams@ligo.org"},
 ]
