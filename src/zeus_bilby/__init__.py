@@ -2,7 +2,7 @@
 
 from importlib.metadata import PackageNotFoundError, version
 
-from .plugin import Zeus
+from .sampler import Zeus
 
 try:
     __version__ = version(__name__)
