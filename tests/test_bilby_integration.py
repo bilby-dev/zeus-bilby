@@ -19,8 +19,8 @@ def test_sampling_zeus(
         likelihood=likelihood,
         priors=priors,
         sampler="zeus",
-        n_walkers=10,
-        n_steps=10,
+        nwalkers=10,
+        iterations=10,
         injection_parameters={"x": 0.0, "y": 0.0},
         n_pool=n_pool,
     )
